@@ -8,4 +8,15 @@ public class Cliente {
 
     public List<Endereco> enderecos;
 
+    public void adicionarEndereco(Endereco endereco) {
+
+    }
+
+    private List<Endereco> getEnderecos() {
+        if (enderecos == null) {
+            enderecos = new ArrayList<Endereco>();
+        }
+        return enderecos;
+    }
+
 }
