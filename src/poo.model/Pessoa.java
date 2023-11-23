@@ -21,16 +21,22 @@ public class Pessoa {
             throw new RuntimeException("Documento nao pode ser nulo nem vazio");
         }
         if (documento.lenght() == TAMANHO_CPF) {
-            tipo = TipoPessoa.FISICA;
+            setDocumento(documento, tipo = TipoPessoa.FISICA);
         } else if (documento.length() == TAMANHO_CNPJ) {
-            tipo = TipoPessoa.JURIDICA;
+            setDocumento(documento, tipo = TipoPessoa.JURIDICA);
         } else {
             throw new RuntimeException("Documento invalido para pessoa fisica ou juridica");
         }
-        this.documento = documento;
-
-        public TipoPessoa getTipo () {
-            return
-        }
 
     }
+
+    private void setDocumento(String documento, TipoPessoa tipo) {
+        this.documento = documento;
+        this.setTipo = tipo;
+    }
+
+    public TipoPessoa getTipo() {
+        return
+    }
+
+}
