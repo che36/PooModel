@@ -7,4 +7,13 @@ public class Pessoa {
     public String documento;
     public String nome;
     public TipoPessoa tipo;
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
 }
