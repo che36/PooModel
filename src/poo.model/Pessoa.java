@@ -20,8 +20,17 @@ public class Pessoa {
         if (documento == null || documento.isEmpty()) {
             throw new RuntimeException("Documento nao pode ser nulo nem vazio");
         }
-        if (documento.lenght())
-            this.documento = documento;
-    }
+        if (documento.lenght() == TAMANHO_CPF) {
+            tipo = TipoPessoa.FISICA;
+        } else if (documento.length() == TAMANHO_CNPJ) {
+            tipo = TipoPessoa.JURIDICA;
+        } else {
+            throw new RuntimeException("Documento invalido para pessoa fisica ou juridica");
+        }
+        this.documento = documento;
 
-}
+        public TipoPessoa getTipo () {
+            return
+        }
+
+    }
