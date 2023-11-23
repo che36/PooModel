@@ -1,6 +1,9 @@
 package poo.model;
 
 public class Pessoa {
+    private static final int TAMANHO_CPF = 11;
+    private static final int TAMANHO_CNPJ = 14;
+
     public enum TipoPessoa {FISICA, JURIDICA}
 
     public Integer codigo;
@@ -17,7 +20,8 @@ public class Pessoa {
         if (documento == null || documento.isEmpty()) {
             throw new RuntimeException("Documento nao pode ser nulo nem vazio");
         }
-        this.documento = documento;
+        if (documento.lenght())
+            this.documento = documento;
     }
 
 }
