@@ -7,8 +7,11 @@ public class EntregaCartaoApp {
         //dados do cliente
         Cliente cliente = new Cliente();
 
-        cliente.adicionarEndereco(endereco);
-        System.out.println("Endereco adicionado com sucesso!");
-
+        try {
+            cliente.adicionarEndereco(endereco);
+            System.out.println("Endereco adicionado com sucesso!");
+        } catch (Exception e) {
+            System.err.println("Houve um erro ao adicionar endereco: " + e.getMessage());
+        }
     }
 }
