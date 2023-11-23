@@ -1,8 +1,9 @@
 package poo.model;
 
-public class Cliente {
+public class Cliente extends Pessoa {
 
     public List<Endereco> enderecos;
+    public String numCartao;
 
     public void adicionarEndereco(Endereco endereco) {
         if (endereco == null) {
