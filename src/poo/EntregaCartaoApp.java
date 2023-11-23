@@ -3,7 +3,7 @@ public class EntregaCartaoApp {
 
         //dado do endereco
         Endereco endereco = new Endereco();
-
+        endereco.cep = "0000000";
         //dados do cliente
         Cliente cliente = new Cliente();
 
